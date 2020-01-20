@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;com.sort.FastSort&apos; to &apos;QuickSort&apos;&#x0D;&#x0A;- Original project: &apos;suanfayushujujiegou&apos;&#x0D;&#x0A;- Original element: &apos;com.sort.FastSort&apos;&#x0D;&#x0A;- Renamed element: &apos;com.sort.QuickSort&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;FastSort&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;com.sort{FastSort.java[FastSort" matchStrategy="1" name="QuickSort" qualified="false" references="true" similarDeclarations="false" stamp="1558516918485" textual="false" version="1.0"/>
+</session>

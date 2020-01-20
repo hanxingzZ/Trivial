@@ -1,0 +1,63 @@
+package leetCode;
+
+import com.alibaba.fastjson.JSON;
+
+import question.Q3listNode.ListNode;
+
+public class AA {
+	public static ListNode addTwoNumbers(ListNode l1, ListNode l2) {
+		if (l1.val == 0 || l1 == null) {
+			return l2;
+		}
+		if (l2.val == 0 || l2 == null) {
+			return l1;
+		}
+
+		ListNode temp = l1;
+		ListNode pre = null;
+		while (temp != null && l2 != null) {
+			temp.val += l2.val;
+			pre = temp;
+			temp = temp.next;
+			l2 = l2.next;
+		}
+		if (temp == null) {
+			pre.next = l2;
+		}
+		temp = l1;
+		while (temp != null) {
+			if (temp.val >= 10) {
+				if (temp.next != null) {
+					temp.next.val += temp.val / 10;
+				} else {
+					temp.next = new ListNode(temp.val / 10);
+				}
+				temp.val %= 10;
+			}
+			temp = temp.next;
+		}
+		return l1;
+	}
+
+	public static void main(String[] args) {
+		int[] arr1 = { 8, 6, 5, 6, 8, 3, 5, 7 };
+		int[] arr2 = { 7, 8, 0, 8, 5, 8, 9, 7 };
+		ListNode l1 = new ListNode(0);
+		ListNode l2 = new ListNode(6);
+		ListNode temp1 = l1;
+		ListNode temp2 = l2;
+		for (int a : arr1) {
+			temp1.next = new ListNode(a);
+			temp1 = temp1.next;
+		}
+		for (int a : arr2) {
+			temp2.next = new ListNode(a);
+			temp2 = temp2.next;
+		}
+		System.out.println(1);
+		System.out.println(JSON.toJSONString(addTwoNumbers(l1, l2)));
+	}
+
+	}
+
+}

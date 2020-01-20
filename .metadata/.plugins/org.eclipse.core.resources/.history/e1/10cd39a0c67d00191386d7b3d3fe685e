@@ -1,0 +1,151 @@
+package testHashMap;
+
+import java.io.BufferedReader;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.io.Reader;
+import java.net.HttpURLConnection;
+import java.net.URI;
+import java.net.URL;
+import java.util.ArrayList;
+import java.util.List;
+
+import com.alibaba.fastjson.JSON;
+
+class A {
+
+	private List<?> list;
+	private boolean isLogin;
+	private String inchudao;
+	private String errMsg;
+	private List<?> showPayList;
+
+	public List<?> getList() {
+		return list;
+	}
+
+	public void setList(List<?> list) {
+		this.list = list;
+	}
+
+	public boolean isLogin() {
+		return isLogin;
+	}
+
+	public void setLogin(boolean isLogin) {
+		this.isLogin = isLogin;
+	}
+
+	public String getInchudao() {
+		return inchudao;
+	}
+
+	public void setInchudao(String inchudao) {
+		this.inchudao = inchudao;
+	}
+
+	public String getErrMsg() {
+		return errMsg;
+	}
+
+	public void setErrMsg(String errMsg) {
+		this.errMsg = errMsg;
+	}
+
+	public List<?> getShowPayList() {
+		return showPayList;
+	}
+
+	public void setShowPayList(List<?> showPayList) {
+		this.showPayList = showPayList;
+	}
+
+	@Override
+	public String toString() {
+		return "A [list=" + list + ", isLogin=" + isLogin + ", inchudao=" + inchudao + ", errMsg=" + errMsg
+				+ ", showPayList=" + showPayList + "]";
+	}
+}
+
+public class TestJava {
+
+	public static void main(String[] args) {
+
+		try {
+
+			String url = "http://housetrade.m.58.com/order/order_list/____json4fe";
+
+			String json = TestJava.getHttpResponse(url);
+			String str1 = "____json4fe = {";
+			System.out.println(str1.length());
+			json = json.substring(json.indexOf(str1) + 14, json.indexOf(";        }catch"));
+			System.out.println(json);
+			json = json.replace("[", "[1,2,3");
+			System.out.println(json);
+			A a = JSON.parseObject(json, A.class);
+			System.out.println(a);
+			System.out.println(a.getList());
+
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+
+	public static String getHttpResponse(String allConfigUrl) {
+		BufferedReader in = null;
+		StringBuffer result = null;
+		try {
+
+			URI uri = new URI(allConfigUrl);
+			URL url = uri.toURL();
+			System.out.println(url);
+			HttpURLConnection connection = (HttpURLConnection) url.openConnection();
+			connection.setRequestProperty("Content-Type", "application/x-www-form-urlencoded");
+			connection.setRequestProperty("Charset", "utf-8");
+
+			connection.connect();
+
+			result = new StringBuffer();
+			// 读取URL的响应
+			in = new BufferedReader(new InputStreamReader(connection.getInputStream()));
+			String line;
+			while ((line = in.readLine()) != null) {
+				result.append(line);
+			}
+
+			return result.toString();
+
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			try {
+				if (in != null) {
+					in.close();
+				}
+			} catch (Exception e2) {
+				e2.printStackTrace();
+			}
+		}
+
+		return null;
+
+	}
+
+	public static String getJsonString(String urlPath) throws Exception {
+		URL url = new URL(urlPath);
+		HttpURLConnection connection = (HttpURLConnection) url.openConnection();
+		connection.connect();
+		InputStream inputStream = connection.getInputStream();
+		// 对应的字符编码转换
+		Reader reader = new InputStreamReader(inputStream, "UTF-8");
+		BufferedReader bufferedReader = new BufferedReader(reader);
+		String str = null;
+		StringBuffer sb = new StringBuffer();
+		while ((str = bufferedReader.readLine()) != null) {
+			sb.append(str);
+		}
+		reader.close();
+		connection.disconnect();
+		return sb.toString();
+	}
+}

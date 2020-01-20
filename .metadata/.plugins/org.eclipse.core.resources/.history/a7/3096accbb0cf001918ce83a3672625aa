@@ -1,0 +1,19 @@
+package com.hx.java8.in.action.stream;
+
+import java.util.List;
+import java.util.stream.Collectors;
+
+import com.hx.java8.in.action.stream.model.Dish;
+import com.hx.java8.in.action.stream.utils.Utils;
+
+public class Test {
+
+	public static void main(String[] args) {
+		List<Dish> list = Utils.getDemoDishes();
+
+		// 1.获取热量大于300的前三菜肴
+		List<String> names1 = list.stream().filter(d -> d.getCalories() > 300).limit(3).map(Dish::getName)
+				.collect(Collectors.toList());
+
+	}
+}

@@ -1,0 +1,16 @@
+package leetCode;
+/** 
+ * 
+ * @description: TODO
+ * @author : 韩兴(xing.han@ucarinc.com)
+ * @date 创建时间：2020年1月17日 下午6:04:43 
+ * @version 1.0   
+ */
+public class LengthOfLIS {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

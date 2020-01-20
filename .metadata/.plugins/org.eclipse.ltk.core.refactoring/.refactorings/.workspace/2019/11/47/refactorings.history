@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Delete 8 resources" deleteContents="false" description="Delete 8 resources" element1="/cardatadict" element2="/cardatadict-api" element3="/cardatadict-server" element4="/cardatadict-ui" element5="/carhitch" element6="/carhitch-api" element7="/carhitch-server" element8="/carhitch-ui" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="8" stamp="1574045775071"/>
+</session>

@@ -1,0 +1,22 @@
+package offer;
+
+import util.ListNode;
+
+/**
+ * 
+ * @description: TODO
+ * @author : 韩兴(xing.han@ucarinc.com)
+ * @date 创建时间：2019年12月8日 下午3:28:59
+ * @version 1.0
+ */
+public class ReverseList {
+	public static ListNode reverseList(ListNode head) {
+		return null;
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

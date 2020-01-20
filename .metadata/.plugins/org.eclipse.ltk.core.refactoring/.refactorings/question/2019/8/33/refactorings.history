@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Encapsulate field &apos;util.ListNode.next&apos; in &apos;util.ListNode&apos;&#x0D;&#x0A;- Original project: &apos;question&apos;&#x0D;&#x0A;- Original element: &apos;util.ListNode.next&apos;&#x0D;&#x0A;- Getter method name: &apos;getNext&apos;&#x0D;&#x0A;- Setter method name: &apos;setNext&apos;&#x0D;&#x0A;- Field visibility: &apos;public&apos;&#x0D;&#x0A;- Use getter and setter methods in declaring type" comments="false" declaring="true" description="Encapsulate field &apos;next&apos;" flags="589830" getter="getNext" id="org.eclipse.jdt.ui.self.encapsulate" input="/src&lt;util{ListNode.java[ListNode^next" insertion="15" setter="setNext" stamp="1565599115940" version="1.0" visibility="1"/>
+</session>

@@ -1,0 +1,14 @@
+package testHashMap;
+
+public class Test2 {
+
+	public static void main(String[] args) {
+		int i = 19;
+		byte a = (byte) i;
+		int a1 = ((int) a) & 0xff;
+		int a2 = (int) a;
+
+	System.out.println(Integer.toHexString(16));
+
+	}
+}

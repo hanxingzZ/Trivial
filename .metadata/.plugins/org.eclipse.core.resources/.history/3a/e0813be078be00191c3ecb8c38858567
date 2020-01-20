@@ -1,0 +1,25 @@
+package leetCode;
+
+public class ValidParentheses {
+	public boolean isValid(String s) {
+		if (s == null) {
+			return true;
+		}
+
+		return false;
+	}
+
+	private boolean isLeft(char c) {
+		return c == '(' || c == '{' || c == '[';
+	}
+
+	private boolean isRight(char c) {
+		return c == ')' || c == '}' || c == '}';
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

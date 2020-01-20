@@ -1,0 +1,26 @@
+package leetCode;
+
+public class ReverseNum {
+
+	public static int reverse(int x) {
+		long result = 0;
+		while (x != 0) {
+
+		}
+		return (int) result;
+	}
+
+	public static void main(String[] args) {
+		int x = -1;
+		System.out.println(~x + 1);
+		System.out.println(1);
+		StringBuffer str = new StringBuffer("1312321");
+		if(str.indexOf('name="')>0)
+		{
+		 	nameEndIndex = str.indexOf( str.indexOf('name="')+6 , '"' )
+			name =  str.substring(str.indexOf(str.indexOf('name="')+6,nameEndIndex)
+		 }
+
+	}
+
+}

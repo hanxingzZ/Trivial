@@ -1,0 +1,26 @@
+package leetCode;
+
+import java.util.Stack;
+
+public class EvalRPN {
+	public static int evalRPN(String[] arr) {
+		Stack<String> stack1 = new Stack<>();
+		Stack<String> stack2 = new Stack<>();
+		for(String str: arr){
+			if(arr)
+		}
+		return 0;
+	}
+
+	private boolean isNum(String str) {
+		String reg = "^[0-9]+(.[0-9]+)?$";
+		return str.matches(reg);
+
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

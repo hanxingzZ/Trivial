@@ -1,0 +1,7 @@
+package com.hx.java8.in.action;
+
+public class B {
+	public int ss(String s1, String s2) {
+		return 1;
+	}
+}

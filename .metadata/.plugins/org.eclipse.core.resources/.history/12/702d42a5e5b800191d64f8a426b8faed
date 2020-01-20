@@ -1,0 +1,23 @@
+package chapter5;
+
+/**
+ * 19.写一个接受可变参数的方法，验证可以向该方法传递一个逗号分割的string列表或者一个string数组
+ * 
+ * @author xingh
+ *
+ */
+public class Practise19to22 {
+
+	public static void fun(String... args) {
+		for (String arg : args) {
+			System.out.println(arg);
+		}
+	}
+
+	public static void main(String[] args) {
+		fun("132", "232");
+		fun(new String[] { "232", "231" });
+
+	}
+
+}

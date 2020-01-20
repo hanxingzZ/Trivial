@@ -1,0 +1,26 @@
+package util;
+
+/**
+ * 链表
+ *
+ */
+public class ListNode<T> {
+
+	/**
+	 * 数据域
+	 */
+	private T val;
+
+
+	public ListNode() {
+
+	}
+
+	public T getVal() {
+		return val;
+	}
+
+	public void setVal(T val) {
+		this.val = val;
+	}
+}

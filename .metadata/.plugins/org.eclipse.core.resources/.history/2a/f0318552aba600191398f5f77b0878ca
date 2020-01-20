@@ -1,0 +1,28 @@
+package leetCode;
+
+public class ReverseNum {
+
+	public static int reverse(int x) {
+		long result = 0;
+		while (x != 0) {
+			int temp = x % 10;
+			if (x < 0) {
+				temp = -temp;
+			}
+			result = result * 10 + temp;
+			x /= 10;
+		}
+
+		if (result < Integer.MIN_VALUE || result > Integer.MAX_VALUE) {
+			return 0;
+		}
+
+		return (int) result;
+	}
+
+	public static void main(String[] args) {
+		int x = -321;
+		System.out.println(reverse(x));
+
+	}
+}

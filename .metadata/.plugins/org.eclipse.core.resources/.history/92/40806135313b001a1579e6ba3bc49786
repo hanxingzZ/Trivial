@@ -1,0 +1,11 @@
+package util;
+/** 
+ * 
+ * @description: 工具类
+ * @author : 韩兴(xing.han@ucarinc.com)
+ * @date 创建时间：2020年1月20日 上午11:00:55 
+ * @version 1.0   
+ */
+public class ListNode {
+
+}

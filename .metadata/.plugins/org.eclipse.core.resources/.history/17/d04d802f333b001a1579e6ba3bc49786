@@ -1,0 +1,50 @@
+package leetCode;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
+public class Test {
+	public static List<String> aa(int count, int batchSize) {
+		Integer batchNum = 1;
+		Integer batchCount = (count - 1) / batchSize + 1;
+		List<String> list = new ArrayList<String>();
+		while (batchNum <= batchCount) {
+			// 起始下标
+			Integer startIndex = getStartIndex(batchNum, batchSize);
+
+			// 结束下标
+			Integer endIndex = getEndIndex(count, batchNum, batchCount, batchSize);
+			batchNum++;
+			String str = startIndex + "_" + endIndex;
+			list.add(str);
+		}
+		return list;
+	}
+
+	public static Integer getStartIndex(int batchNum, int batchSize) {
+		return (batchNum - 1) * batchSize;
+	}
+
+	public static Integer getEndIndex(int count, int batchNum, int batchCount, int batchSize) {
+
+		Integer endIndex = null;
+		Integer c = count - (batchNum - 1) * batchSize;
+		if (c > batchSize) {
+			endIndex = batchNum * batchSize;
+		} else {
+			endIndex = c + (batchNum - 1) * batchSize;
+		}
+		return endIndex;
+	}
+
+	public static void main(String[] args) {
+		String str = "Thirtyday millisecond constant";
+		System.out.println(str.toUpperCase());
+		Float s1 = 0.1f;
+		Float s2 = 0.1f;
+		System.out.println(s1 == s2);
+
+	}
+
+}

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<typeInfoHistroy>
+<typeInfo handle="=demo1/src\/main\/java&lt;com.example.demo.service{HelloService.java[HelloService" modifiers="513" timestamp="1562232514558"/>
+<typeInfo handle="=demo1/D:\/mavenlocal\/mysql\/mysql-connector-java\/5.1.46\/mysql-connector-java-5.1.46.jar&lt;com.mysql.jdbc(Connection.class[Connection" modifiers="1537" timestamp="1548924819287"/>
+<typeInfo handle="=lianxi/src&lt;com.all.singleton{Singleton1.java[Singleton1" modifiers="1" timestamp="1570528378773"/>
+<typeInfo handle="=lianxi/src&lt;com.all.test{F.java[F" modifiers="1" timestamp="1570523631006"/>
+<typeInfo handle="=JDK1.8特性/C:\/Program Files\/Java\/jdk1.8.0_181\/jre\/lib\/rt.jar&lt;java.util.stream(Collector.class[Collector" modifiers="1537" timestamp="1539757523450"/>
+<typeInfo handle="=JDK1.8特性/C:\/Program Files\/Java\/jdk1.8.0_181\/jre\/lib\/rt.jar&lt;java.util.stream(SliceOps.class[SliceOps" modifiers="48" timestamp="1539757523450"/>
+<typeInfo handle="=JDK1.8特性/C:\/Program Files\/Java\/jdk1.8.0_181\/jre\/lib\/rt.jar&lt;java.util(Random.class[Random" modifiers="33" timestamp="1539757523450"/>
+<typeInfo handle="=JDK1.8特性/C:\/Program Files\/Java\/jdk1.8.0_181\/jre\/lib\/rt.jar&lt;java.util(HashMap.class[HashMap" modifiers="33" timestamp="1539757523450"/>
+<typeInfo handle="=JDK1.8特性/C:\/Program Files\/Java\/jdk1.8.0_181\/jre\/lib\/rt.jar&lt;java.util(ArrayList.class[ArrayList" modifiers="33" timestamp="1539757523450"/>
+<typeInfo handle="=JDK1.8特性/C:\/Program Files\/Java\/jdk1.8.0_181\/jre\/lib\/rt.jar&lt;java.util(Collections.class[Collections" modifiers="33" timestamp="1539757523450"/>
+<typeInfo handle="=JDK1.8特性/C:\/Program Files\/Java\/jdk1.8.0_181\/jre\/lib\/rt.jar&lt;java.lang(OutOfMemoryError.class[OutOfMemoryError" modifiers="33" timestamp="1539757523450"/>
+<typeInfo handle="=JDK1.8特性/C:\/Program Files\/Java\/jdk1.8.0_181\/jre\/lib\/rt.jar&lt;javax.net.ssl(SSLHandshakeException.class[SSLHandshakeException" modifiers="33" timestamp="1539757523450"/>
+</typeInfoHistroy>

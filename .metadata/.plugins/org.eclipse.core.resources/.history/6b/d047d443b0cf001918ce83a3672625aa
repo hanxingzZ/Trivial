@@ -1,0 +1,10 @@
+package com.hx.java8.in.action.stream;
+
+public class Test {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

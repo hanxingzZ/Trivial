@@ -1,0 +1,21 @@
+package com.hx.java8.in.action.lambda;
+
+import java.util.function.BiFunction;
+import java.util.function.Function;
+
+import com.hx.java8.in.action.lambda.LambdaConstructorReference.TirFunction;
+import com.hx.java8.in.action.lambda.model.Person;
+
+public class A {
+
+	public static void main(String[] args) {
+
+		BiFunction<String, String, Integer> b = B::ss;
+
+		BiFunction<String, String, Integer> b1 = (s1, s2) -> B.ss(s1, s2);
+
+		TirFunction<B, String, String, Integer> s = B::ss1;
+		TirFunction<B, String, String, Integer> st = (bb, s1, s2) -> b.ss1(s1, s2);
+	}
+
+}

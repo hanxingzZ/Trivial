@@ -1,0 +1,26 @@
+package com.hx.aomicboolean.test;
+
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.concurrent.atomic.DoubleAdder;
+
+public class Test {
+
+	public static void main(String[] args) throws ParseException {
+		double d = 123.456;
+		long l = Double.doubleToLongBits(d);
+		System.out.println(l);
+		DoubleAdder dou = new DoubleAdder();
+		dou.add(d);
+		dou.add(d);
+		System.out.println(Double.longBitsToDouble(l + l));
+		System.out.println(dou.toString());
+		Date date = new Date();
+		SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd hh:mm:ss");
+		System.out.println(sdf.parse("2018-10-01 11:15:00"));
+		
+
+	}
+
+}

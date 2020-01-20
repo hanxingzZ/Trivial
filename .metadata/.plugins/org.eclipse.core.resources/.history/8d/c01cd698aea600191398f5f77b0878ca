@@ -1,0 +1,13 @@
+package leetCode;
+
+public class Atoi {
+	public static int myAtoi(String str) {
+		return 0;
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

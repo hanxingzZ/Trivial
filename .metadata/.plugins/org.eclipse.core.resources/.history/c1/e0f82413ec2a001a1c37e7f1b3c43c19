@@ -1,0 +1,41 @@
+package leetCode;
+
+import java.util.ArrayList;
+
+public class MyStack1 {
+
+	private ArrayList input;
+	private ArrayList output;
+
+	/** Initialize your data structure here. */
+	public MyStack1() {
+
+	}
+
+	/** Push element x onto stack. */
+	public void push(int x) {
+
+	}
+
+	/** Removes the element on top of the stack and returns that element. */
+	public int pop() {
+
+	}
+
+	/** Get the top element. */
+	public int top() {
+
+	}
+
+	/** Returns whether the stack is empty. */
+	public boolean empty() {
+
+	}
+
+	public static void main(String[] args) {
+		MyStack1 stack = new MyStack1();
+		stack.push(1);
+		stack.pop();
+		stack.empty();
+	}
+}

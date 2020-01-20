@@ -1,0 +1,34 @@
+package com.all.singleton;
+
+public class Test {
+
+	public static void main(String[] args) throws InterruptedException {
+//		Singleton1 s = new Singleton1();
+		Singleton1 s1 = Singleton1.getInstance();
+		Singleton1 s2 = Singleton1.getInstance();
+		System.out.println(s);
+		System.out.println(s1);
+		System.out.println(s2);
+		for (int i = 0; i < 10; i++) {
+			Thread thread = new Thread(() -> {
+				System.out.println("Singleton1 > " + Thread.currentThread().getName() + " > "
+						+ Singleton1.getInstance());
+			});
+			thread.join();
+			thread.start();
+
+		}
+		for (int i = 0; i < 10; i++) {
+			Thread thread = new Thread(() -> {
+				System.out.println("Singleton2 > " + Thread.currentThread().getName() + " > "
+						+ Singleton2.getInstance());
+			});
+			thread.join();
+			thread.start();
+
+		}
+		
+
+	}
+
+}

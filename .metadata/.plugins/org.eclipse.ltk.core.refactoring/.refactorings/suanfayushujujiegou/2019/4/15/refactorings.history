@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename local variable &apos;index&apos; in &apos;com.suanfa.fib.FibTest.fib3(...)&apos; to &apos;temp&apos;&#x0D;&#x0A;- Original project: &apos;suanfayushujujiegou&apos;&#x0D;&#x0A;- Original element: &apos;com.suanfa.fib.FibTest.fib3(int).index&apos;&#x0D;&#x0A;- Renamed element: &apos;index&apos;&#x0D;&#x0A;- Update references to refactored element" description="Rename local variable &apos;index&apos;" id="org.eclipse.jdt.ui.rename.local.variable" input="/src&lt;com.suanfa.fib{FibTest.java[FibTest~fib3~I@index!453!466!457!461!I!0!false" name="temp" references="true" stamp="1554967260927" version="1.0"/>
+</session>

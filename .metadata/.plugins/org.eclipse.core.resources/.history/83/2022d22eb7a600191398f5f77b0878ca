@@ -1,0 +1,55 @@
+package leetCode;
+
+public class Atoi {
+
+	public static int myAtoi(String str) {
+		if (str == null || str.length() == 0) {
+			return 0;
+		}
+		str = str.trim();
+		if (str.length() == 0) {
+			return 0;
+		}
+		StringBuilder sb1 = new StringBuilder(str);
+		StringBuilder sb2 = new StringBuilder();
+		char c = sb1.charAt(0);
+		if ((c >= '0' && c <= '9')) {
+			sb2.append(c);
+		} else if (!(c == '+' || c == '-')) {
+			return 0;
+		}
+		for (int i = 1; i < sb1.length(); i++) {
+			char c1 = sb1.charAt(i);
+			if (!(c1 >= '0' && c1 <= '9')) {
+				break;
+			}
+			sb2.append(c1);
+
+		}
+		if (sb2.length() > 10) {
+			return c == '-' ? Integer.MIN_VALUE : Integer.MAX_VALUE;
+		}
+		long result = 0;
+		long index = 1;
+		for (int i = sb2.length() - 1; i >= 0; i--) {
+			char c2 = sb2.charAt(i);
+			if (c == '-') {
+				result += -(c2 - 48) * index;
+			} else {
+				result += (c2 - 48) * index;
+			}
+			index *= 10;
+			if (result < Integer.MIN_VALUE || result > Integer.MAX_VALUE) {
+				return result < Integer.MIN_VALUE ? Integer.MIN_VALUE : Integer.MAX_VALUE;
+			}
+		}
+		return (int) result;
+	}
+
+	public static void main(String[] args) {
+		String str = "9223372036854775808";
+
+		System.out.println(myAtoi(str));
+
+	}
+}

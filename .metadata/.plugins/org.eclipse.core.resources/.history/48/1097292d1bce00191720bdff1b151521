@@ -1,0 +1,16 @@
+package com.hx.java8.in.action.lambda;
+
+import java.util.ArrayList;
+import java.util.Comparator;
+import java.util.List;
+
+public class TestLambda {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		List list = new ArrayList<>();
+		 Comparator<Person> byWeight = 
+				 (Apple a1, Apple a2) -> a1.getWeight().compareTo(a2.getWeight());
+	}
+
+}

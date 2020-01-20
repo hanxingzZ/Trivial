@@ -1,0 +1,16 @@
+package com.hx.java8.in.action.stream.test82;
+/** 
+ * 
+ * @description: TODO
+ * @author : 韩兴(xing.han@ucarinc.com)
+ * @date 创建时间：2019年12月2日 下午6:35:37 
+ * @version 1.0   
+ */
+public class ProcessingTest {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

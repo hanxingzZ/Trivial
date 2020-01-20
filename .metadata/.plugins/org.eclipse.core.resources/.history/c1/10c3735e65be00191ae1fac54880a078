@@ -1,0 +1,63 @@
+package leetCode;
+
+import util.ListNode;
+
+public class RemoveNthFromEnd {
+	public static ListNode<Integer> removeNthFromEnd(ListNode<Integer> head, int n) {
+		ListNode<Integer> list1 = head;
+		ListNode<Integer> list2 = head;
+
+		// 先让list1走n步
+		for (int i = 0; i < n; i++) {
+			list1 = list1.getNext();
+		}
+		// 因为题中表明n均有效，所以此种情况删除的就是链表中第一个元素
+		if (list1 == null) {
+			return head.getNext();
+		}
+		// 再让list1和list同时跑直到list1位null
+		while (list1.getNext() != null) {
+			list1 = list1.getNext();
+			head = head.getNext();
+		}
+		// 此时list2的下一个节点为要删除的节点，删除即可
+		head.setNext(head.getNext().getNext());
+		return list2;
+	}
+
+	public static ListNode<Integer> removeNthFromEnd1(ListNode<Integer> head, int n) {
+		ListNode<Integer> list1 = head;
+		ListNode<Integer> list2 = head;
+		int l = 0;
+		while (list1 != null) {
+			list1 = list1.getNext();
+			l++;
+		}
+		if (l == n) {
+			return head.getNext();
+		}
+		for (int i = 0; i <= l - n; i++) {
+			head = head.getNext();
+		}
+		head.setNext(head.getNext().getNext());
+		return list2;
+	}
+
+	public static void main(String[] args) {
+		ListNode<Integer> ln = new ListNode<Integer>(1);
+		ln.add(Integer.valueOf(2));
+		ln.add(Integer.valueOf(3));
+		ln.add(Integer.valueOf(4));
+		ln.add(Integer.valueOf(5));
+		removeNthFromEnd(ln, 2);
+		ListNode<Integer> ln1 = new ListNode<Integer>(1);
+		removeNthFromEnd(ln1, 1).printListNode();
+		removeNthFromEnd1(ln1, 1).printListNode();
+		ListNode<Integer> ln2 = new ListNode<Integer>(1);
+		ln2.add(Integer.valueOf(2));
+		removeNthFromEnd(ln2, 2).printListNode();
+		removeNthFromEnd1(ln2, 2).printListNode();
+
+	}
+
+}

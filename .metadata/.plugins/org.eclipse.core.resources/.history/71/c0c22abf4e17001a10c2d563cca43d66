@@ -1,0 +1,55 @@
+package offer;
+
+import java.util.ArrayList;
+
+import util.ListNode;
+
+/**
+ * 
+ * @description: 输入一个链表，按链表从尾到头的顺序返回一个ArrayList。
+ * @author : 韩兴(xing.han@ucarinc.com)
+ * @date 创建时间：2019年12月5日 下午6:41:28
+ * @version 1.0
+ */
+public class PrintListFromTailToHead {
+	static ArrayList<Integer> l = new ArrayList<>();
+
+	/** 遍历 和 栈相同F*/
+	public static ArrayList<Integer> printListFromTailToHead(ListNode<Integer> listNode) {
+		ArrayList<Integer> tempList = new ArrayList<>();
+		if (listNode == null) {
+			return tempList;
+		}
+		while (listNode != null) {
+			tempList.add(listNode.val);
+			listNode = listNode.next;
+		}
+		ArrayList<Integer> list = new ArrayList<>();
+		for (int i = tempList.size() - 1; i >= 0; i--) {
+			System.out.println(i);
+			list.add(tempList.get(i));
+		}
+		return list;
+	}
+
+	/** 递归解法 */
+	public static ArrayList<Integer> printListFromTailToHead1(ListNode<Integer> listNode) {
+		if (listNode != null) {
+			printListFromTailToHead1(listNode.next);
+			l.add(listNode.val);
+		}
+
+		return l;
+	}
+
+	public static void main(String[] args) {
+		// {67,0,24,58}
+		ListNode<Integer> listNode = new ListNode<Integer>(67);
+		listNode.add(0);
+		listNode.add(24);
+		listNode.add(58);
+		System.out.println(listNode.length());
+		System.out.println(printListFromTailToHead(listNode));
+		System.out.println(printListFromTailToHead1(listNode));
+	}
+}

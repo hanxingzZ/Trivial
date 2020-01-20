@@ -1,0 +1,64 @@
+package com.all;
+
+import java.util.HashMap;
+import java.util.Map;
+
+import com.alibaba.fastjson.JSON;
+
+public class Test {
+
+	class Singleton {
+		private Singleton() {
+
+		}
+
+		public Singleton getInsSingleton() {
+			return Insantce.insantce;
+		}
+
+		private static class Insantce {
+			public final static Singleton insantce = new Singleton();
+		}
+	}
+
+	public static int[] twoSum(int[] nums, int target) {
+		int[] result = new int[2];
+		int begin = 0;
+		int end = nums.length - 1;
+		int temp;
+		while (begin < end) {
+			temp = nums[begin] + nums[end];
+			if (temp < target) {
+				begin++;
+			} else if (temp > target) {
+				end--;
+			} else {
+				result[0] = begin;
+				result[1] = end;
+				return result;
+			}
+		}
+		return result;
+	}
+
+	public static int[] sum(int[] nums, int target) {
+		int[] result = new int[2];
+		Map<Integer, Integer> map = new HashMap<>();
+		for (int i = 0; i < nums.length; i++) {
+			if (map.containsKey(target - nums[i])) {
+				result[0] = map.get(target - nums[i]);
+				result[1] = i;
+				return result;
+			}
+			map.put(nums[i], i);
+		}
+		return result;
+	}
+
+	public static void main(String[] args) {
+
+		int[] a = { 3, 2, 4 };
+		System.out.println(JSON.toJSONString(twoSum(a, 6)));
+	}
+
+}

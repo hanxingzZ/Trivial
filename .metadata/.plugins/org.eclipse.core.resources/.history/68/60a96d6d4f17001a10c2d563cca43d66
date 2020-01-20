@@ -1,0 +1,30 @@
+package offer;
+
+import java.util.Stack;
+
+/**
+ * 
+ * @description: TODO
+ * @author : 韩兴(xing.han@ucarinc.com)
+ * @date 创建时间：2019年12月5日 下午7:04:59
+ * @version 1.0
+ */
+public class TwoStack2Queue {
+	Stack<Integer> stack1 = new Stack<Integer>();
+	Stack<Integer> stack2 = new Stack<Integer>();
+
+	public void push(int node) {
+
+	}
+
+	public int pop() {
+		
+		return 0;
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

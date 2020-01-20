@@ -1,0 +1,305 @@
+package util;
+
+/**
+ * 链表
+ *
+ */
+public class MyLinkedList<T> {
+	
+	/**
+	 * 头结点
+	 */
+	private ListNode<T> head;
+	
+	/**
+	 * 指针域
+	 */
+	private ListNode<T> node;
+
+	public MyLinkedList() {
+
+	}
+
+	public MyLinkedList(T a) {
+		this();
+		node = new ListNode<T>(a);
+	}
+
+	/**
+	 * 在链表尾端插入节点
+	 * 
+	 * @param
+	 */
+	public void add(T a) {
+		ListNode<T> node = new ListNode<T>(a);
+
+		if (head == null) {
+			head = new ListNode<T>();
+			head.setNext(node.getNext());
+			return;
+		} else {
+			ListNode<T> temp = head;
+			while (temp.getNext() != null) {
+				temp = temp.getNext();
+			}
+			temp.setNext(node.getNext());
+		}
+
+	}
+
+	/**
+	 * 在链表指定位置插入节点
+	 * 
+	 * @param
+	 */
+	public void add(int index, T a) {
+		if (!isPositionIndex(index)) {
+			throw new IndexOutOfBoundsException(String.valueOf(index));
+		}
+		MyLinkedList<T> node = new MyLinkedList<T>(a);
+		MyLinkedList<T> temp = head;
+		while (index > 0) {
+			temp = temp.getNext();
+			index--;
+		}
+		MyLinkedList<T> t = new MyLinkedList<>();
+		t = temp.getNext();
+		temp.setNext(node);
+		node.setNext(t);
+
+	}
+
+	/**
+	 * 在链表尾端添加链表
+	 * 
+	 * @param node
+	 */
+	public void add(MyLinkedList<T> node) {
+		if (node.head.getNext() != null) {
+			if (head == null) {
+				head = new MyLinkedList<T>();
+				head.setNext(node.head.getNext());
+
+			} else {
+				MyLinkedList<T> temp = head;
+				while (temp.getNext() != null) {
+					temp = temp.getNext();
+				}
+				temp.setNext(node.head.getNext());
+			}
+		}
+
+	}
+
+	/**
+	 * 通过下标移除元素
+	 * 
+	 * @param index
+	 * @return
+	 */
+
+	public T remove(int index) {
+		if (!isPositionIndex(index)) {
+			throw new IndexOutOfBoundsException(String.valueOf(index));
+		}
+		MyLinkedList<T> temp = head;
+		while (index >= 0) {
+			temp = temp.getNext();
+			index--;
+		}
+		temp.setNext(temp.getNext().getNext());
+		return temp.val;
+	}
+
+	/**
+	 * 移除链表中第一次出现的o
+	 * 
+	 * @param o
+	 * @return
+	 */
+	public boolean remove(T o) {
+		if (head == null) {
+			return false;
+		}
+		MyLinkedList<T> temp = head;
+		while (temp.getNext() != null) {
+			if (o == null) {
+				if (o == temp.getNext().val) {
+					temp.setNext(temp.getNext().getNext());
+					return true;
+				}
+			} else {
+				if (o.equals(temp.getNext().val)) {
+					temp.setNext(temp.getNext().getNext());
+					return true;
+				}
+			}
+			temp = temp.getNext();
+		}
+
+		return false;
+	}
+
+	/**
+	 * 返回下标的元素
+	 * 
+	 * @param index
+	 * @return
+	 */
+	public T get(int index) {
+		return this.getListNode(index).val;
+	}
+
+	/**
+	 * 修改下标的元素
+	 * 
+	 * @param index
+	 * @param o
+	 * @return
+	 */
+	public T set(int index, T o) {
+		MyLinkedList<T> node = this.getListNode(index);
+		T oldVal = node.val;
+		node.val = o;
+		return oldVal;
+	}
+
+	/**
+	 * 返回下标的节点
+	 * 
+	 * @param index
+	 * @return
+	 */
+	private MyLinkedList<T> getListNode(int index) {
+		if (!isPositionIndex(index)) {
+			throw new IndexOutOfBoundsException(String.valueOf(index));
+		}
+		MyLinkedList<T> temp = head;
+		while (index >= 0) {
+			temp = temp.getNext();
+			index--;
+		}
+		return temp;
+	}
+
+	/**
+	 * 返回元素第一次出现的下标
+	 * 
+	 * @param index
+	 * @return
+	 */
+	public int get(T o) {
+
+		if (head == null) {
+			return -1;
+		}
+		int index = 0;
+		MyLinkedList<T> temp = head;
+		while (temp.getNext() != null) {
+
+			if (o == null) {
+				if (o == temp.getNext().val) {
+					return index;
+				}
+			} else {
+				if (o.equals(temp.getNext().val)) {
+					return index;
+				}
+			}
+			temp = temp.getNext();
+			index++;
+		}
+		return -1;
+	}
+
+	/**
+	 * 打印当前链表
+	 */
+	public void printListNode() {
+		if (head == null) {
+			return;
+		}
+		MyLinkedList<T> temp = head;
+		System.out.print("打印链表：");
+		while (temp.getNext() != null) {
+			System.out.print(temp.getNext().val + " ");
+			temp = temp.getNext();
+		}
+	}
+
+	/**
+	 * 链表长度
+	 * 
+	 * @return
+	 */
+	public int length() {
+		int count = 0;
+		if (head == null) {
+			return count;
+		}
+		MyLinkedList<T> temp = head;
+		while (temp.getNext() != null) {
+			temp = temp.getNext();
+			count++;
+		}
+		return count;
+	}
+
+	/**
+	 * 清空链表
+	 */
+	public void clear() {
+		if (head == null) {
+			return;
+		}
+		MyLinkedList<T> temp = head;
+		while (temp.getNext() != null) {
+			MyLinkedList<T> node = temp.getNext();
+			temp.head = null;
+			temp.val = null;
+			temp.setNext(null);
+			temp = node;
+		}
+	}
+
+	/**
+	 * 判断输入地址是否是有效的
+	 * 
+	 * @param index
+	 * 
+	 */
+	private boolean isPositionIndex(int index) {
+		if (index < 0 || index > this.length()) {
+			return false;
+		}
+		return true;
+
+	}
+
+	/**
+	 * 是一个静态util方法，用来打印非当前链表，由于目前方法较少未单独成包
+	 */
+	public static void printListNode(MyLinkedList<?> node) {
+		if (node.head == null) {
+			return;
+		}
+		MyLinkedList<?> temp = node.head;
+		System.out.print("打印链表：");
+		while (temp.getNext() != null) {
+			System.out.print(temp.getNext().val + " ");
+			temp = temp.getNext();
+		}
+	}
+
+	public MyLinkedList<T> getNext() {
+		return next;
+	}
+
+	public void setNext(MyLinkedList<T> next) {
+		this.next = next;
+	}
+
+	public T val() {
+		return val;
+	}
+}

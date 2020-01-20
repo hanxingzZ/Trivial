@@ -1,0 +1,38 @@
+package leetCode;
+
+/**
+ * 
+ * @description: TODO
+ * @author : 韩兴(xing.han@ucarinc.com)
+ * @date 创建时间：2019年12月24日 下午5:47:50
+ * @version 1.0
+ */
+public class LuzongTest {
+	public static char test(char[] letters, char target) {
+
+		char index = (char) ((target + 1) % 123);
+		int begin = 0;
+		int end = letters.length - 1;
+		if (index > letters[end]) {
+			return letters[begin];
+		}
+		while (begin < end) {
+			int mid = (begin + end) / 2;
+			if (letters[mid] > index) {
+				end = mid;
+			} else if (letters[mid] < index) {
+				begin = mid + 1;
+			} else {
+				return (char) index;
+			}
+		}
+		return letters[end];
+	}
+
+	public static void main(String[] args) {
+		char[] c = { 'c', 'f', 'z' };
+		System.out.println(test(c, 'c'));
+		System.out.println((char) 97);
+	}
+
+}

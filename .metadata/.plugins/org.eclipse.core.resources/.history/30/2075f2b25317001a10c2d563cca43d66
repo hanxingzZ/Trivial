@@ -1,0 +1,33 @@
+package offer;
+
+/**
+ * 
+ * @description: 大家都知道斐波那契数列，现在要求输入一个整数n，请你输出斐波那契数列的第n项（从0开始，第0项为0）。
+ * @author : 韩兴(xing.han@ucarinc.com)
+ * @date 创建时间：2019年12月5日 下午7:34:14
+ * @version 1.0
+ */
+public class Fibonacci {
+
+	public static int fibonacci(int n) {
+		if (n <= 0) {
+			return 0;
+		}
+		if (n <= 2) {
+			return 1;
+		}
+		int one = 1;
+		int two = 1;
+		int temp;
+		for (int i = 3; i < n; i++) {
+			temp = one + two;
+		}
+		return 0;
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

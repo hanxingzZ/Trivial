@@ -1,0 +1,78 @@
+package com.adt.xiaojie;
+
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.LinkedList;
+import java.util.List;
+
+import util.SimpleListNode;
+
+public class QSwapListNode {
+
+	public static void main(String[] args) {
+
+		List<String> list = new ArrayList<>();
+		list.add("one");
+		list.add("two");
+		list.add("three");
+		for (Iterator<String> i = list.iterator(); i.hasNext();) {
+			for (Iterator<String> j = list.iterator(); j.hasNext();) {
+				System.out.println(i.next() + " " + j.next()); // i.next()和j.next()都会直接走向写一个元素
+			}
+		}
+
+		SimpleListNode<Integer> node = new SimpleListNode<>(1);
+
+		node.add(1);
+		node.add(3);
+		node.add(2);
+		node.add(85);
+		node.add(85);
+		node.printListNode();
+		System.out.println();
+		System.out.println("长度：" + node.length());
+		SimpleListNode<Integer> node1 = new SimpleListNode<Integer>();
+		node1.add(100);
+		node1.printListNode();
+		System.out.println();
+		System.out.println("长度：" + node1.length());
+		node.add(node1);
+		node.printListNode();
+		System.out.println();
+		System.out.println("长度：" + node.length());
+		System.out.println(node.remove(0));
+		node.printListNode();
+		System.out.println();
+		System.out.println("长度：" + node.length());
+		System.out.println(node.remove(Integer.valueOf(85)));
+		node.printListNode();
+		System.out.println();
+		System.out.println("长度：" + node.length());
+		node.clear();
+		node.printListNode();
+		System.out.println();
+		System.out.println("长度：" + node.length());
+		node.clear();
+		node.printListNode();
+		System.out.println();
+		System.out.println("长度：" + node.length());
+		for (int i = 0; i < 10; i++)
+			node.add(i);
+		node.printListNode();
+		System.out.println();
+		System.out.println("长度：" + node.length());
+		node.add(0, null);
+		node.printListNode();
+		System.out.println();
+		System.out.println("长度：" + node.length());
+		// for (int i = 0; i < 10; i++)
+		// System.out.println(node.get(i));
+		System.out.println(node.get(null));
+		System.out.println(node.set(0, 1));
+		node.printListNode();
+		System.out.println();
+		System.out.println("长度：" + node.length());
+
+	}
+
+}

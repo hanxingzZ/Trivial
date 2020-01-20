@@ -1,0 +1,27 @@
+package leetCode;
+
+import java.util.List;
+
+public class Test {
+	public static List<String> aa(int count, int batchSize) {
+		Integer batchNum = 1;
+		Integer batchCount = (count - 1) / batchSize + 1;
+		while (batchNum <= batchCount) {
+			// 起始下标
+			Integer startIndex = getStartIndex(batchNum, batchSize);
+
+			// 结束下标
+			Integer endIndex = getEndIndex(count, batchNum, batchCount, batchSize);
+			batchNum++;
+			String str = startIndex + "_" + endIndex;
+
+		}
+		return null;
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

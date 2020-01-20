@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.example.demo.mapper.HelloMapper">
+	<resultMap id="BaseResultMap" type="com.example.demo.model.User">
+		<id column="id" property="id" jdbcType="INTEGER" />
+		<result column="name" property="name" jdbcType="VARCHAR" />
+		<result column="age" property="age" jdbcType="VARCHAR" />
+		<result column="birthday" property="birthday" jdbcType="VARCHAR" />
+	</resultMap>
+	<sql id="Base_Column_List">
+		id , name , age,birthday
+	</sql>
+	<select id="selectByPrimaryKey" resultMap="BaseResultMap"
+		parameterType="java.lang.Integer">
+		select
+		<include refid="Base_Column_List" />
+		from user
+		where id = #{id,jdbcType=INTEGER}
+	</select>
+
+
+	<select id="getAllUser" resultMap="BaseResultMap" resultType="java.util.List">
+		select
+		<include refid="Base_Column_List" />
+		from user
+	</select>
+	<insert id="insert" parameterType="com.example.demo.model.User"
+		useGeneratedKeys="true" keyProperty="id">
+		insert into user (
+		name ,
+		age ,
+		birthday
+		)
+		values (
+		#{name} , #{age} , #{birthday}
+		)
+
+	</insert>
+
+</mapper>

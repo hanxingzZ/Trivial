@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
+    <wb-module deploy-name="appoint-search-front-wrapper">
+        <property name="context-root" value="appoint-search-front-wrapper"/>
+        <property name="java-output-path" value="/appoint-search-front-wrapper/target/classes"/>
+    </wb-module>
+</project-modules>

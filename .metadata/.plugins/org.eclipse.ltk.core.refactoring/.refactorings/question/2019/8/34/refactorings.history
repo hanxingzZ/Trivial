@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename local variable &apos;count&apos; in &apos;question.Q1array.Find1(...)&apos; to &apos;index&apos;&#x0D;&#x0A;- Original project: &apos;question&apos;&#x0D;&#x0A;- Original element: &apos;question.Q1array.Find1(int, int[][]).count&apos;&#x0D;&#x0A;- Renamed element: &apos;count&apos;&#x0D;&#x0A;- Update references to refactored element" description="Rename local variable &apos;count&apos;" id="org.eclipse.jdt.ui.rename.local.variable" input="/src&lt;question{Q1array.java[Q1array~Find1~I~\[\[I@count!627!658!631!635!I!0!false" name="index" references="true" stamp="1566460584844" version="1.0"/>
+</session>

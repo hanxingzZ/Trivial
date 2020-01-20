@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;leetCode.MySort&apos; to &apos;MySqrt&apos;&#x0D;&#x0A;- Original project: &apos;question&apos;&#x0D;&#x0A;- Original element: &apos;leetCode.MySort&apos;&#x0D;&#x0A;- Renamed element: &apos;leetCode.MySqrt&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;MySort&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;leetCode{MySort.java[MySort" matchStrategy="1" name="MySqrt" qualified="false" references="true" similarDeclarations="false" stamp="1578643439350" textual="false" version="1.0"/>
+</session>

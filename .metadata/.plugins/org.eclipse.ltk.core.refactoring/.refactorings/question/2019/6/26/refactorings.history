@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename local variable &apos;j&apos; in &apos;util.Test.adJustMinHeap(...)&apos; to &apos;i&apos;&#x0D;&#x0A;- Original project: &apos;question&apos;&#x0D;&#x0A;- Original element: &apos;util.Test.adJustMinHeap(int[], int, int).j&apos;&#x0D;&#x0A;- Renamed element: &apos;j&apos;&#x0D;&#x0A;- Update references to refactored element" description="Rename local variable &apos;j&apos;" id="org.eclipse.jdt.ui.rename.local.variable" input="/src&lt;util{Test.java[Test~adJustMinHeap~\[I~I~I@j!1166!1178!1170!1170!I!0!false" name="i" references="true" stamp="1561621559145" version="1.0"/>
+</session>

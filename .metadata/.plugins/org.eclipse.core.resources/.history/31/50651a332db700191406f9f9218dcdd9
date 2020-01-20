@@ -1,0 +1,23 @@
+package leetCode;
+
+public class MaxSubArray {
+
+	public static int maxSubArray(int[] nums) {
+		if (nums.length == 0) {
+			return 0;
+		}
+		int sum = 0;
+		int tempSum = 0;
+		for (int a : nums) {
+			tempSum = tempSum + a > tempSum ? tempSum + a : a;
+		}
+
+		return 0;
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

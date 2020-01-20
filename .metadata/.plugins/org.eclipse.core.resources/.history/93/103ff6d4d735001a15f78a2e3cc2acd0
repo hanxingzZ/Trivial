@@ -1,0 +1,17 @@
+package leetCode;
+
+/**
+ * 
+ * @description: 给定一个整数，编写一个函数来判断它是否是 2 的幂次方。
+ * @author : 韩兴(xing.han@ucarinc.com)
+ * @date 创建时间：2020年1月13日 下午3:39:06
+ * @version 1.0
+ */
+public class IsPowerOfTwo {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

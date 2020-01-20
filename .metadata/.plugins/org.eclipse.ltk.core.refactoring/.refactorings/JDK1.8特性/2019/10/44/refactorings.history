@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Move element &apos;B.java&apos; to &apos;JDK1.8特性/src/com.hx.java8.in.action.lambda&apos;&#x0D;&#x0A;- Original project: &apos;JDK1.8特性&apos;&#x0D;&#x0A;- Destination element: &apos;JDK1.8特性/src/com.hx.java8.in.action.lambda&apos;&#x0D;&#x0A;- Original element: &apos;com.hx.java8.in.action.B.java&apos;&#x0D;&#x0A;- Update references to refactored element" description="Move compilation unit" destination="/src&lt;com.hx.java8.in.action.lambda" element1="/src&lt;com.hx.java8.in.action{B.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.move" patterns="*" policy="org.eclipse.jdt.ui.moveResources" qualified="false" references="true" stamp="1572427239429" units="1" version="1.0"/>
+</session>

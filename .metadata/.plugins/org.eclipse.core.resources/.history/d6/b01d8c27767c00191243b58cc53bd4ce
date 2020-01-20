@@ -1,0 +1,25 @@
+package com.sort;
+
+public class QuickSort {
+
+	public static void quickSort(int[] arr) {
+		quickSort(arr, 0, arr.length - 1);
+	}
+
+	private static void quickSort(int[] arr, int low, int high) {
+		if (low < high) {
+			int index = getIndex(arr, low, high);
+		}
+	}
+
+	private static int getIndex(int[] arr, int low, int high) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

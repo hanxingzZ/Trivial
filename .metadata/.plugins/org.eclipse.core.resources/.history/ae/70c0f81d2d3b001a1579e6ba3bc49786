@@ -1,0 +1,57 @@
+package com.btree;
+
+public class BiTreeNode<T> {
+	/**
+	 * 数据域
+	 */
+	private T val;
+
+	private BiTreeNode<T> leftNode;
+
+	private BiTreeNode<T> rightNode;
+
+	public BiTreeNode() {
+
+	}
+
+	public BiTreeNode(T t) {
+		this(t, null, null);
+
+	}
+
+	public BiTreeNode(T t, BiTreeNode<T> leftNode, BiTreeNode<T> rightNode) {
+		this.val = t;
+		this.leftNode = leftNode;
+		this.rightNode = rightNode;
+	}
+
+	public T getVal() {
+		return val;
+	}
+
+	public void setVal(T val) {
+		this.val = val;
+	}
+
+	public BiTreeNode<T> getLeftNode() {
+		return leftNode;
+	}
+
+	public void setLeftNode(BiTreeNode<T> leftNode) {
+		this.leftNode = leftNode;
+	}
+
+	public BiTreeNode<T> getRightNode() {
+		return rightNode;
+	}
+
+	public void setRightNode(BiTreeNode<T> rightNode) {
+		this.rightNode = rightNode;
+	}
+
+	public void clear() {
+		this.val = null;
+		this.rightNode = null;
+		this.leftNode = null;
+	}
+}

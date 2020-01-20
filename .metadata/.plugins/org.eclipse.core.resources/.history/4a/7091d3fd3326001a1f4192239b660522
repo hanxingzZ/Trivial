@@ -1,0 +1,26 @@
+package leetCode;
+
+/**
+ * 
+ * @description: TODO
+ * @author : 韩兴(xing.han@ucarinc.com)
+ * @date 创建时间：2019年12月24日 下午5:47:50
+ * @version 1.0
+ */
+public class LuzongTest {
+	public static char test(char[] letters, char target) {
+		char index = (char) ((target + 1) % 123);
+		int begin = 0;
+		int end = letters.length - 1;
+		int mid = (begin + end) / 2;
+		while (begin < end) {
+
+		}
+		return 0;
+	}
+
+	public static void main(String[] args) {
+
+	}
+
+}

@@ -1,0 +1,16 @@
+package com.hx.java8.in.action.stream;
+
+import java.util.List;
+
+import com.hx.java8.in.action.stream.model.Dish;
+import com.hx.java8.in.action.stream.utils.Utils;
+
+public class Test {
+
+	public static void main(String[] args) {
+		List<Dish> list = Utils.getDemoDishes();
+		
+
+	}
+
+}

@@ -1,0 +1,25 @@
+package leetCode;
+
+public class ReverseNum {
+
+	public static int reverse(int x) {
+		long result = 0;
+		while (x != 0) {
+
+		}
+		return (int) result;
+	}
+
+	public static void main(String[] args) {
+		int x = -1;
+		System.out.println(~x + 1);
+		System.out.println(1);
+		String str = "1132";
+		if(str.indexOf("name=\"")>0)
+		{
+		 	int nameEndIndex = str.indexOf( str.indexOf("name=\"")+6 , "\"" );
+		 	String name =  str.substring(str.indexOf(str.indexOf("name=\"")+6,nameEndIndex);
+		 }
+
+	}
+}

@@ -1,0 +1,14 @@
+package testHashMap;
+
+public class Test2 {
+
+	public static void main(String[] args) {
+		byte a1 = 19;
+		int a = a1&0xff;
+		int a2 = a1;
+		System.out.println(Integer.bitCount(a));
+		System.out.println(Integer.bitCount(a2));
+
+	}
+
+}

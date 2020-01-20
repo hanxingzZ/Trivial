@@ -1,0 +1,27 @@
+package chapter5;
+
+import static utils.Utils.print;
+
+/**
+ * 
+ * @author xingh
+ *
+ */
+public class Practise13to14 {
+
+	class Cup {
+		Cup(int marker) {
+			print("Cup" + marker + ")");
+		}
+
+		void f(int marker) {
+			print("f" + marker + ")");
+		}
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

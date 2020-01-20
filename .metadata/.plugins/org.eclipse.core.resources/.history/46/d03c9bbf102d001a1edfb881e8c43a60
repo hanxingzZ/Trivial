@@ -1,0 +1,25 @@
+package leetCode;
+
+/**
+ * 
+ * @description: 给定两个字符串 s 和 t ，编写一个函数来判断 t 是否是 s 的字母异位词。
+ * 
+ *               示例 1:
+ * 
+ *               输入: s = "anagram", t = "nagaram" 输出: true
+ * 
+ * @author : 韩兴(xing.han@ucarinc.com)
+ * @date 创建时间：2020年1月2日 上午11:32:23
+ * @version 1.0
+ */
+public class IsAnagram {
+	public boolean isAnagram(String s, String t) {
+
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

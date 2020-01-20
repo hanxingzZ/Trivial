@@ -1,0 +1,26 @@
+package leetCode;
+
+/**
+ * 
+ * @description: 给定一个整数数组 nums ，找出一个序列中乘积最大的连续子序列（该序列至少包含一个数）。
+ * @author : 韩兴(xing.han@ucarinc.com)
+ * @date 创建时间：2020年1月14日 下午5:10:23
+ * @version 1.0
+ */
+public class MaxProduct {
+	public int maxProduct(int[] nums) {
+
+		int dpMax = nums[0];
+		int dpMin = nums[0];
+		for (int i = 1; i < nums.length; i++) {
+
+		}
+		return 0;
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

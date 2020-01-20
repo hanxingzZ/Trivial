@@ -1,0 +1,12 @@
+package offer;
+
+/**
+ * 
+ * @description: 输入一个链表，按链表从尾到头的顺序返回一个ArrayList。
+ * @author : 韩兴(xing.han@ucarinc.com)
+ * @date 创建时间：2019年12月5日 下午6:41:28
+ * @version 1.0
+ */
+public class PrintListFromTailToHead {
+
+}

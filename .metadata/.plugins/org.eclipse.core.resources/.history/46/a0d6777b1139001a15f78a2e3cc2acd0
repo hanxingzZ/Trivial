@@ -1,0 +1,32 @@
+package leetCode;
+
+/**
+ * 
+ * @description: TODO
+ * @author : 韩兴(xing.han@ucarinc.com)
+ * @date 创建时间：2020年1月17日 下午6:04:43
+ * @version 1.0
+ */
+public class LengthOfLIS {
+	public int lengthOfLIS(int[] nums) {
+		int l = nums.length;
+		if (l == 0) {
+			return 0;
+		}
+		int dp[] = new int[l + 1];
+
+		for (int i = 1; i < l; i++) {
+			for (int j = i - 1; j >= 0; j++) {
+
+			}
+		}
+
+		return 0;
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

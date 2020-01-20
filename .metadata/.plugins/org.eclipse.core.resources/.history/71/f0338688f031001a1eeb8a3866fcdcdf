@@ -1,0 +1,28 @@
+package leetCode;
+
+import java.util.HashMap;
+import java.util.Map;
+
+/**
+ * 
+ * @description: TODO
+ * @author : 韩兴(xing.han@ucarinc.com)
+ * @date 创建时间：2020年1月8日 下午4:24:37
+ * @version 1.0
+ */
+public class MajorityElement {
+	public static int majorityElement(int[] nums) {
+		Map map = new HashMap<>(nums.length / 2);
+		for (int a : nums) {
+
+		}
+
+		return 0;
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

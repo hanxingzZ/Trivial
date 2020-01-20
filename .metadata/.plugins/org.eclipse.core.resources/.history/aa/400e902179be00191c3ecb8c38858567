@@ -1,0 +1,34 @@
+package leetCode;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class ValidParentheses {
+	public boolean isValid(String s) {
+		if (s == null) {
+			return true;
+		}
+		char[] cArr = s.toCharArray();
+		List<Character> list = new ArrayList<>();
+		for (int i = 0; i < cArr.length; i++) {
+			if (isLeft(cArr[i])) {
+
+			}
+		}
+		return false;
+	}
+
+	private boolean isLeft(char c) {
+		return c == '(' || c == '{' || c == '[';
+	}
+
+	private boolean isRight(char c) {
+		return c == ')' || c == '}' || c == '}';
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

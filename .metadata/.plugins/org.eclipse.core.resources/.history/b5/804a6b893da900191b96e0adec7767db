@@ -1,0 +1,17 @@
+package leetCode;
+
+import java.util.List;
+
+public class Test {
+	public static List<String> aa(int count, int batchSzie) {
+		Integer batchNum = 1;
+		Integer batchCount = (count - 1) / batchSize + 1;
+		return null;
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

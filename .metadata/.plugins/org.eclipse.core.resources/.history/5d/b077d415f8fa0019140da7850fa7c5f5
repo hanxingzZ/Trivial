@@ -1,0 +1,17 @@
+package com.hx.java8.in.action.lambda;
+
+import java.util.function.BiFunction;
+import java.util.function.Function;
+
+public class A {
+
+	public static void main(String[] args) {
+		BiFunction<String, String, Integer> s = B::ss;
+		BiFunction<String, String, Integer> s11 = (s1, s2) -> new B().ss(s1, s2);
+
+			Function<String, Integer> s2 = B::ss1;
+			Function<String, Integer> s22 = (s112) -> new B().ss1(s112);
+
+	}
+
+}

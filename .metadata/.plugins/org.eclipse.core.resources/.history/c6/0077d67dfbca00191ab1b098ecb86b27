@@ -1,0 +1,38 @@
+package com.hx.aomicboolean.test;
+
+import java.text.ParseException;
+import java.util.concurrent.atomic.DoubleAdder;
+
+public class Test {
+
+	public static void main(String[] args) throws ParseException {
+//		double d = 123.456;
+//		long l = Double.doubleToLongBits(d);
+//		System.out.println(l);
+//		DoubleAdder dou = new DoubleAdder();
+//		dou.add(d);
+//		dou.add(d);
+//		System.out.println(Double.longBitsToDouble(l + l));
+//		System.out.println(dou.toString());
+
+		byte q1 = 3;
+		char q2 = '3';
+		short q3 = 3;
+		int q4 = 3;
+		long q5 = 3;
+		float q6 = 3;
+		double q7 = 3;
+		String q8 = "3";
+
+		switch (q2) {
+		case 3:
+			System.out.println(q1);
+			break;
+
+		default:
+			break;
+		}
+
+	}
+
+}
